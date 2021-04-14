@@ -1,25 +1,22 @@
-import java.awt.Color;
-
+import java.awt.Container;
 import javax.swing.JFrame;
 
-import jdk.internal.platform.Container;
 
 public class BBallGUI extends JFrame{
    
     public BBallGUI(){
         setSize(300,300);
-        setBackground(Color.cyan);
         setResizable(false);
+        setTitle("My BBall Stats Program");
 
-        BorderLayout layout = new BorderLayout();
         Container pane = getContentPane();
-        pane.setLayout();
-
         pane.add(new BBallPanel());
+
     }
 
     public static void main(String[] args) {
-       BBallGUI frame = new BBallGUI();
+        BBallGUI frame = new BBallGUI();
         frame.setVisible(true);
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
